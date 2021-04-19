@@ -3,12 +3,11 @@ import { PostService } from '../post.service';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-register-login',
-  templateUrl: './register-login.component.html',
-  styleUrls: ['./register-login.component.css'],
-  encapsulation: ViewEncapsulation.None,
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
 })
-export class RegisterLoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
   sendForm = this.formBuilder.group({ name: '', password: '' });
   constructor(
     private postService: PostService,
