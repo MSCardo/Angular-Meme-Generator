@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "username": "MSCardo",
+      "password": "password"
+    },
+    {
+      "id": "TroopTest",
+      "password": "passwords"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": {
+    "username": "Csaba",
+    "password": "asd"
+  }
+}
