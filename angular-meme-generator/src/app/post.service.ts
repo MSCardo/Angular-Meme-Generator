@@ -23,8 +23,14 @@ export class PostService {
     console.log(body);
     return this.http.get<any>('http://localhost:3000/users').subscribe({
       next: (data) => {
-        if (data === body) {
-          localStorage.setItem('token', data.username);
+        console.log(data);
+        if (data.username === body.username) {
+          if (data.password === body.password) {
+            localStorage.setItem('token', data.username);
+            return console.log('Sikers login');
+          } else {
+            console.log('Wrong password');
+          }
         } else {
           console.log('No user');
         }

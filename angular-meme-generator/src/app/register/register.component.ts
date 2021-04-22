@@ -1,4 +1,9 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  EventEmitter,
+  ViewEncapsulation,
+} from '@angular/core';
 import { PostService } from '../post.service';
 import { FormBuilder } from '@angular/forms';
 
@@ -6,10 +11,10 @@ import { FormBuilder } from '@angular/forms';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class RegisterComponent implements OnInit {
   sendForm = this.formBuilder.group({ name: '', password: '' });
+  callComponent: EventEmitter<any> = new EventEmitter();
   constructor(
     private postService: PostService,
     private formBuilder: FormBuilder
